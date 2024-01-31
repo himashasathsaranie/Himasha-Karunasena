@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title> Pasata Restaurant</title>
+
+		<!-- Web Fonts -->
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+		<!-- CSS Global Compulsory -->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!-- CSS Header and Footer -->
+		<link rel="stylesheet" href="assets/css/header.css">
+		<link rel="stylesheet" href="assets/css/footer.css">
+
+		<!-- CSS Implementing Plugins -->
+		<link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css">
+		<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+		<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+		<!-- CSS Customization -->
+		<link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+	<!--=== Header v1 ===-->
+	<div class="header-v1">
+	<!-- Topbar -->
+	<div class="topbar-v1">
+	<div class="container">
+	<div class="row">
+</div>
+</div>
+</div>
+
+<!-- End Topbar -->
+
+				<!-- Navbar -->
+				<div class="navbar mega-menu" role="navigation">
+				<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="res-container">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-responsive-collapse">
+				<div class="res-container">
+				<ul class="nav navbar-nav">
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+
+				<!-- Home  -->
+				<li class="mega-menu-fullwidth">
+				<a href="index.html" >
+				HOME
+				</a>
+
+				</li>
+				<!-- End Home-->
+
+				<!-- About Us -->
+				<li class="mega-menu-fullwidth">
+				<a href="about.html" >
+				ABOUT US
+				</a>	
+				</li>
+				<!-- End About us -->
+
+				<!-- Doctors -->
+				<li class="mega-menu-fullwidth">
+				<a href="doctors.html" >
+				MEALS
+				</a>
+
+				</li>
+				<!-- End Doctors -->
+
+
+				<!-- Gallery -->
+				<li class="mega-menu-fullwidth">
+				<a href="gallery.html" >
+				GALLERY
+				</a>
+
+				</li>
+				<!-- End Gallery -->
+
+
+				<!-- Blog -->
+				<li class="mega-menu-fullwidth">
+				<a href="blog.html" >
+				DEVELOPERS
+				</a>	
+				</li>
+				<!-- End Blog -->
+
+				<!-- Contact Us -->
+				<li class="mega-menu-fullwidth">
+				<a href="contact.html" >
+				CONTACT US
+				</a>	
+				</li>
+				<!-- End Contact us -->
+
+				<!-- Registration -->
+				<li class="mega-menu-fullwidth">
+				<a href="registration.html" >
+				GIFT VOUCHERS
+				</a>	
+				</li>
+				<!-- End registration -->
+
+				</ul>
+
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<!-- End Navbar -->
+
+
+
+			<!-- Slider -->
+			<div id="slide">
+			<div class="slideshow-container">
+			<div class="mySlides fade"> <img src="assets/img/slider/1.jpg" alt="Slider1" style="width:100%" height="500"> </div>
+			<div class="mySlides fade"> <img src="assets/img/slider/2.jpg" alt="Slider2" style="width:100%" height="500"> </div>
+			<div class="mySlides fade"> <img src="assets/img/slider/3.jpg" alt="Slider3" style="width:100%" height="500"> </div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+			</div>
+			<br>
+			<div style="text-align:center"> 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			</div>
+			</div>
+
+			<script>
+			var slideIndex = 0;
+			showSlides();
+			var slides,dots;
+
+			function showSlides() {
+			var i;
+			slides = document.getElementsByClassName("mySlides");
+			dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 8000); // Change image every 8 seconds
+			}
+
+			function plusSlides(position) {
+			slideIndex +=position;
+			if (slideIndex> slides.length) {slideIndex = 1}
+			else if(slideIndex<1){slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			}
+
+			function currentSlide(index) {
+			if (index> slides.length) {index = 1}
+			else if(index<1){index = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[index-1].style.display = "block";  
+			dots[index-1].className += " active";
+			}
+			</script>
+
+
+			<!-- End of Slider -->
+
+		<!--=== Welcome to Unity===-->
+		<div class="container content-md welcomeSection">
+		<div class="row section1">
+		<div class="col-md-6" style="margin-bottom: 40px;" style="border:2px solid black background: green;">
+			<h2 class="title-v2">WELCOME TO <span style="color: #72c02c;"> Pasata Restaurant </span></h2>
+			<p style="text-align: justify; font-size: 14px;">It is with immense pleasure and excitement that we introduce you to Pasata Restaurant - a haven of culinary delights nestled in the heart of our beloved colombo city. As you step through our doors, you embark on a journey of flavors, emotions, and experiences like no other.</p>
+			<p style="text-align: justify; font-size: 14px;"> Pasata Restaurant is the brainchild of a passionate team of chefs, food enthusiasts, and hospitality experts, all driven by a shared vision to redefine the art of dining. Our mission is simple: to create an unforgettable dining experience that lingers in your heart long after the last bite.</p> <br>
+			<a href="about.html" class="btn-u btn-brd btn-brd-hover">Read More</a>
+		</div>
+		<div class="col-md-6 overflow-h">
+			<img style="border-radius: 50px; margin-left: 30px;" src="assets/img/bg/1.jpg" alt="">
+		</div>
+		</div>
+		</div>
+		<!--=== End About Us ===-->
+
+
+
+		<!-- Specialities -->
+		<div class="container" style="margin-top: 50px;">
+		<div class="headline-center" style="margin-bottom: 60px;">
+			<h2>Our Specialities</h2>
+			<div class="line"></div>
+		</div><!--end Spciallities-->
+
+		<div class="row" style="margin-bottom: 40px;">
+			<div class="col-md-4">
+				<div class="content-boxes-v5" style="margin-bottom: 30px;">
+					<i class="icon-medical-005" style="border-radius: 50%;"></i>
+					<div class="overflow-h">
+						<h3 class="no-top-space">Local Cuisine</h3>
+					</div>
+				</div>
+				<div class="content-boxes-v5" style="margin-bottom: 30px;">
+					<i style="border-radius: 50%;" class="icon-medical-054"></i>
+					<div class="overflow-h">
+						<h3 class="no-top-space">Farm-to-Table </h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="content-boxes-v5" style="margin-bottom: 30px;">
+					<i style="border-radius: 50%;" class="icon-medical-042"></i>
+					<div class="overflow-h">
+						<h3 class="no-top-space">Seafood Delights</h3>
+					</div>
+				</div>
+				<div class="content-boxes-v5" style="margin-bottom: 30px;">
+					<i style="border-radius: 50%;" class="icon-medical-019"></i>
+					<div class="overflow-h">
+						<h3 class="no-top-space">Vegetarian and Vegan</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="content-boxes-v5" style="margin-bottom: 30px;">
+					<i style="border-radius: 50%;" class="icon-medical-069"></i>
+					<div class="overflow-h">
+						<h3 class="no-top-space">International Fusion</h3>
+					</div>
+				</div>
+				<div class="content-boxes-v5" style="margin-bottom: 30px;">
+					<i style="border-radius: 50%;" class="icon-medical-061"></i>
+					<div class="overflow-h">
+						<h3 class="no-top-space">Street Food-inspired</h3>
+					</div>
+				</div>
+			</div>
+		</div><!--/end row-->
+		</div><!--/end container-->
+		<!-- End Content Part -->
+
+				<!-- Plans Start -->
+				<section class="pricingSection">
+				<div class="container" style="margin-top: 20px;">
+				<div class="headline-center">
+					<h2>Popular Dishes</h2>
+					<div class="line"></div>
+				<div class="row">
+				<!-- Pricing Item -->
+				<div class="col-md-3 col-xs-6 col-2xs-12">
+					<div style="border-radius: 10px;" class="pricing-v9 hover-effect">
+						<div class="pricing-v9-head">
+							<h3 class="h3"><span class="g-color-default">Pasata</span> Chicken Kottu</h3>
+						</div>
+						<ul style="list-style-type:none;">
+							<li>Single Portion</li>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+						</ul>
+						<div class="pricing-v9-price">
+							For <span class="g-color-default">₨.2,400</span>
+						</div>
+					</div>
+				</div>
+				<!-- /Pricing Item -->
+				<!-- Pricing Item -->
+				<div class="col-md-3 col-xs-6 col-2xs-12">
+					<div style="border-radius: 10px;" class="pricing-v9 hover-effect">
+						<div class="pricing-v9-head">
+							<h3 class="h3"><span class="g-color-default">Pasata</span> Lamprais</h3>
+						</div>
+						<ul style="list-style-type:none;">
+							<li>With Chicken</li> <li>and</li> <li>Mutton mixed curry</li>
+							<li>&nbsp;</li>
+						</ul>
+						<div class="pricing-v9-price">
+							For <span class="g-color-default">₨.2,400</span> 
+						</div>
+					</div>
+				</div>
+				<!-- /Pricing Item -->
+				<!-- Pricing Item -->
+				<div class="col-md-3 col-xs-6 col-2xs-12">
+					<div style="border-radius: 10px;" class="pricing-v9 hover-effect">
+						<div class="pricing-v9-head">
+							<h3 class="h3"><span class="g-color-default">Pasata</span> Prawn Curry</h3>
+						</div>
+						<ul style="list-style-type:none;">
+							<li>with</li> <li>Murunga Leaves</li> <li>(1KG)</li>
+							<li>&nbsp;</li>
+						</ul>
+						<div class="pricing-v9-price">
+							For <span class="g-color-default">₨.12,200</span> 
+						</div>
+					</div>
+				</div>
+				<!-- /Pricing Item -->
+				<!-- Pricing Item -->
+				<div class="col-md-3 col-xs-6 col-2xs-12">
+					<div style="border-radius: 10px;" class="pricing-v9 hover-effect">
+						<div class="pricing-v9-head">
+							<h3 class="h3"><span class="g-color-default">Pasata</span> Lagoon Crab Curry</h3>
+						</div>
+						<ul style="list-style-type:none;">
+							<li>(1kg)</li>
+							<li>From 9.00 am – 10:30 pm.</li>
+							<li>Daily</li>
+						</ul>
+						<div class="pricing-v9-price">
+							For <span class="g-color-default">₨.16,000</span> 
+						</div>
+					</div>
+				</div>
+				<!-- /Pricing Item -->
+				</div>
+				</div>
+				</div>
+				</section>
+				<!-- End PLANS -->
+
+
+		
+
+
+
+		<!--=== Footer ===-->
+		<div class="footer-v1">
+		<div class="footer">
+		<div class="container">
+		<div class="row">
+		<!-- About -->
+		<!--/col-md-3-->
+		<!-- End About -->
+
+		<!-- Latest -->
+		<div class="col-md-3" style="margin-bottom: 40px;">
+		<div class="posts">
+		<div class="headline"><h2>Latest Posts</h2></div>
+		<ul class="list-unstyled latest-list">
+		<li>
+		<a href="blog.html">Meet The Developers</a>
+		</li>
+		<li>
+		<a href="gallery.html">Latest Images</a>
+		</li>
+		</ul>
+		</div>
+		</div><!--/col-md-3-->
+		<!-- End Latest -->
+
+		<!-- Link List -->
+		<div class="col-md-3" style="margin-bottom: 40px;">
+		<div class="headline"><h2>Useful Links</h2></div>
+		<ul class="list-unstyled link-list">
+		<li><a href="about.html">About us</a><i class="fa fa-angle-right"></i></li>
+		<li><a href="Contact.html">Contact us</a><i class="fa fa-angle-right"></i></li>
+		</ul>
+		</div><!--/col-md-3-->
+		<!-- End Link List -->
+
+		<!-- Address -->
+		<div class="col-md-3 map-img" style="margin-bottom: 40px;">
+		<div class="headline"><h2>Contact Us</h2></div>
+		<address class="md-margin-bottom-40">
+		Phone: +94743851367 <br />
+		Email: pasatarestaurant@gmail.com 
+		</address>
+		</div><!--/col-md-3-->
+		<!-- End Address -->
+		</div>
+		</div>
+		</div><!--/footer-->
+
+		<div class="copyright">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-6">
+		</div>
+
+		<!-- Social Links -->
+		<div class="col-md-6">
+		<ul class="footer-socials list-inline">
+		<li>
+		<a href="http://www.facebook.com" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+		<i class="fa fa-facebook"></i>
+		</a>
+		</li>
+		<li>
+		<a href="http://www.skype.com" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+		<i class="fa fa-skype"></i>
+		</a>
+		</li>
+		<li>
+		<a href="http://www.googleplus.com" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+		<i class="fa fa-google-plus"></i>
+		</a>
+		</li>
+		<li>
+		<a href="http://www.linkedin.com" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+		<i class="fa fa-linkedin"></i>
+		</a>
+		</li>
+		<li>
+		<a href="http://www.Pinterest.com" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+		<i class="fa fa-pinterest"></i>
+		</a>
+		</li>
+		<li>
+		<a href="http://www.twitter.com" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+		<i class="fa fa-twitter"></i>
+		</a>
+		</li>
+		</ul>
+		</div>
+		<!-- End Social Links -->
+		</div>
+		</div>
+		</div><!--/copyright-->
+		</div>
+		<!--=== End Footer ===-->
+</div><!--/wrapper-->
+
+</body>
+</html>
+
